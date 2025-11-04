@@ -196,26 +196,26 @@ const Portfolio = () => {
   const t = content[lang];
 
   const AboutPage = () => (
-    <div className="space-y-12 animate-fadeIn">
-      <div className="text-center space-y-4">
+    <div className="space-y-8 md:space-y-12 animate-fadeIn">
+      <div className="text-center space-y-3 md:space-y-4 px-4">
         <div className="inline-block animate-float">
-          <span className="text-7xl">🤖</span>
+          <span className="text-5xl md:text-7xl">🤖</span>
         </div>
-        <h1 className="text-6xl font-black">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-black">
           {lang === 'fr' ? 'Moi, c\'est Mohamed' : 'Hi, I\'m Mohamed'}
         </h1>
-        <p className={`text-2xl font-bold ${isDark ? 'text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-rose-400' : 'text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-rose-600'}`}>
+        <p className={`text-lg sm:text-xl md:text-2xl font-bold ${isDark ? 'text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-rose-400' : 'text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-rose-600'}`}>
           {lang === 'fr' ? '22 ans • Étudiant-chercheur • Dresseur de robots quadrupèdes' : '22 y/o • Student-researcher • Quadruped robot tamer'}
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
-        <div className={`p-8 rounded-3xl hover-lift ${isDark ? 'bg-gradient-to-br from-orange-950/40 to-amber-950/40 border-2 border-orange-500/30' : 'bg-gradient-to-br from-orange-50 to-amber-50 border-2 border-orange-200'}`}>
-          <div className="flex items-center gap-3 mb-4">
-            <Brain className={isDark ? 'text-orange-400' : 'text-orange-600'} size={36} />
-            <h3 className="text-3xl font-bold">{lang === 'fr' ? 'L\'humain' : 'The Human'}</h3>
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+        <div className={`p-6 md:p-8 rounded-2xl md:rounded-3xl hover-lift ${isDark ? 'bg-gradient-to-br from-orange-950/40 to-amber-950/40 border-2 border-orange-500/30' : 'bg-gradient-to-br from-orange-50 to-amber-50 border-2 border-orange-200'}`}>
+          <div className="flex items-center gap-2 md:gap-3 mb-3 md:mb-4">
+            <Brain className={isDark ? 'text-orange-400' : 'text-orange-600'} size={28} />
+            <h3 className="text-2xl md:text-3xl font-bold">{lang === 'fr' ? 'L\'humain' : 'The Human'}</h3>
           </div>
-          <p className={`text-lg leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+          <p className={`text-base md:text-lg leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
             {lang === 'fr' 
               ? "Master 2 PAR à Clermont-Ferrand. Je transforme des équations en robots qui marchent. Passionné par l'intersection entre physique, IA et efficacité énergétique. Mon crédo : un robot intelligent sait où il va ET combien ça coûte en énergie. Major de promo M1 (1/42), boursier d'excellence 2 ans."
               : "Master 2 PAR in Clermont-Ferrand. I turn equations into walking robots. Passionate about the intersection of physics, AI and energy efficiency. My motto: a smart robot knows where it's going AND how much energy it costs. Top of class M1 (1/42), 2-year excellence scholarship."
@@ -223,12 +223,12 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className={`p-8 rounded-3xl hover-lift ${isDark ? 'bg-gradient-to-br from-teal-950/40 to-cyan-950/40 border-2 border-teal-500/30' : 'bg-gradient-to-br from-teal-50 to-cyan-50 border-2 border-teal-200'}`}>
-          <div className="flex items-center gap-3 mb-4">
-            <Rocket className={isDark ? 'text-teal-400' : 'text-teal-600'} size={36} />
-            <h3 className="text-3xl font-bold">{lang === 'fr' ? 'La mission' : 'The Mission'}</h3>
+        <div className={`p-6 md:p-8 rounded-2xl md:rounded-3xl hover-lift ${isDark ? 'bg-gradient-to-br from-teal-950/40 to-cyan-950/40 border-2 border-teal-500/30' : 'bg-gradient-to-br from-teal-50 to-cyan-50 border-2 border-teal-200'}`}>
+          <div className="flex items-center gap-2 md:gap-3 mb-3 md:mb-4">
+            <Rocket className={isDark ? 'text-teal-400' : 'text-teal-600'} size={28} />
+            <h3 className="text-2xl md:text-3xl font-bold">{lang === 'fr' ? 'La mission' : 'The Mission'}</h3>
           </div>
-          <p className={`text-lg leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+          <p className={`text-base md:text-lg leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
             {lang === 'fr'
               ? "Créer des robots qui comprennent vraiment leur environnement. Mon truc ? L'optimisation énergétique sur terrains complexes. Genre faire qu'un quadrupède sache exactement où poser ses pattes pour grimper une pente sans vider sa batterie. Premier framework ROS 2 natif pour Unitree B1 au monde !"
               : "Creating robots that truly understand their environment. My thing? Energy optimization on complex terrains. Like making a quadruped know exactly where to place its paws to climb a slope without draining its battery. First native ROS 2 framework for Unitree B1 worldwide!"
@@ -237,12 +237,12 @@ const Portfolio = () => {
         </div>
       </div>
 
-      <div className={`p-10 rounded-3xl hover-lift ${isDark ? 'bg-gradient-to-r from-indigo-950/40 via-purple-950/40 to-pink-950/40 border-2 border-indigo-500/30' : 'bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 border-2 border-indigo-200'}`}>
-        <div className="flex items-center gap-3 mb-6">
-          <Heart className={isDark ? 'text-rose-400' : 'text-rose-600'} size={36} />
-          <h3 className="text-3xl font-bold">{lang === 'fr' ? 'Ce qui me fait vibrer' : 'What makes me tick'}</h3>
+      <div className={`p-6 md:p-10 rounded-2xl md:rounded-3xl hover-lift ${isDark ? 'bg-gradient-to-r from-indigo-950/40 via-purple-950/40 to-pink-950/40 border-2 border-indigo-500/30' : 'bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 border-2 border-indigo-200'}`}>
+        <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-6">
+          <Heart className={isDark ? 'text-rose-400' : 'text-rose-600'} size={28} />
+          <h3 className="text-2xl md:text-3xl font-bold">{lang === 'fr' ? 'Ce qui me fait vibrer' : 'What makes me tick'}</h3>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {[
             { icon: '🤖', title: 'Open Source', desc: lang === 'fr' ? 'ROS 2, Docker, GitHub. Code partagé = connaissance multipliée' : 'ROS 2, Docker, GitHub. Shared code = multiplied knowledge' },
             { icon: '🏃', title: 'Trail Running', desc: lang === 'fr' ? 'La montagne m\'apprend l\'endurance. Et à gérer mon énergie (ironique, non ?)' : 'Mountains teach me endurance. And energy management (ironic, right?)' },
@@ -285,45 +285,45 @@ const Portfolio = () => {
   );
 
   const ExperiencePage = () => (
-    <div className="space-y-12 animate-fadeIn">
-      <div className="text-center mb-12">
-        <h1 className="text-6xl font-black mb-4">
+    <div className="space-y-8 md:space-y-12 animate-fadeIn">
+      <div className="text-center mb-8 md:mb-12 px-4">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-3 md:mb-4">
           <span className={isDark ? 'text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-rose-400 to-purple-400 animate-gradient' : 'text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-rose-600 to-purple-600 animate-gradient'}>
             {lang === 'fr' ? 'Mon Aventure' : 'My Journey'}
           </span>
         </h1>
-        <p className={`text-xl ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+        <p className={`text-base md:text-xl ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
           {lang === 'fr' ? 'De la théorie au terrain, en passant par beaucoup de café' : 'From theory to field, via lots of coffee'}
         </p>
       </div>
 
       <div className="relative">
-        <div className={`absolute left-8 top-0 bottom-0 w-1 ${isDark ? 'bg-gradient-to-b from-orange-500 via-teal-500 to-indigo-500' : 'bg-gradient-to-b from-orange-400 via-teal-400 to-indigo-400'} rounded-full`}></div>
+        <div className={`hidden md:block absolute left-8 top-0 bottom-0 w-1 ${isDark ? 'bg-gradient-to-b from-orange-500 via-teal-500 to-indigo-500' : 'bg-gradient-to-b from-orange-400 via-teal-400 to-indigo-400'} rounded-full`}></div>
         
-        <div className="space-y-8 ml-20">
+        <div className="space-y-6 md:space-y-8 md:ml-20">
           {/* INRAE Research - 2025 */}
-          <div className={`p-8 rounded-3xl hover-lift ${isDark ? 'bg-gradient-to-br from-emerald-950/40 to-teal-950/40 border-2 border-emerald-500/30' : 'bg-gradient-to-br from-emerald-50 to-teal-50 border-2 border-emerald-200'}`}>
-            <div className="flex items-start gap-6">
-              <div className={`p-4 rounded-2xl ${isDark ? 'bg-emerald-500/20' : 'bg-emerald-200'} animate-pulse-glow`}>
-                <Cpu className={isDark ? 'text-emerald-400' : 'text-emerald-700'} size={40} />
+          <div className={`p-5 md:p-8 rounded-2xl md:rounded-3xl hover-lift ${isDark ? 'bg-gradient-to-br from-emerald-950/40 to-teal-950/40 border-2 border-emerald-500/30' : 'bg-gradient-to-br from-emerald-50 to-teal-50 border-2 border-emerald-200'}`}>
+            <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6">
+              <div className={`p-3 md:p-4 rounded-xl md:rounded-2xl ${isDark ? 'bg-emerald-500/20' : 'bg-emerald-200'} animate-pulse-glow`}>
+                <Cpu className={isDark ? 'text-emerald-400' : 'text-emerald-700'} size={32} />
               </div>
               <div className="flex-1">
-                <div className="flex items-center gap-3 mb-3">
-                  <h3 className="text-3xl font-black">INRAE - TSCF Lab</h3>
-                  <span className={`px-3 py-1 rounded-full text-sm font-bold ${isDark ? 'bg-emerald-500/30 text-emerald-300' : 'bg-emerald-200 text-emerald-900'}`}>Avr-Sep 2025 🔥</span>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 md:gap-3 mb-2 md:mb-3">
+                  <h3 className="text-2xl md:text-3xl font-black">INRAE - TSCF Lab</h3>
+                  <span className={`px-2.5 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold w-fit ${isDark ? 'bg-emerald-500/30 text-emerald-300' : 'bg-emerald-200 text-emerald-900'}`}>Avr-Sep 2025 🔥</span>
                 </div>
-                <p className={`text-xl font-bold mb-3 ${isDark ? 'text-emerald-400' : 'text-emerald-700'}`}>
+                <p className={`text-lg md:text-xl font-bold mb-2 md:mb-3 ${isDark ? 'text-emerald-400' : 'text-emerald-700'}`}>
                   {lang === 'fr' ? 'Stage Recherche - Robotique Autonome & Systèmes Énergétiques' : 'Research Intern - Autonomous Robotics & Energy Systems'}
                 </p>
-                <p className={`text-lg leading-relaxed mb-4 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                <p className={`text-sm md:text-lg leading-relaxed mb-3 md:mb-4 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                   {lang === 'fr' 
                     ? "Premier framework ROS 2 natif pour Unitree B1 avec architecture modulaire. Modèle énergétique avec prise en compte de l'orientation sur pentes (5°-20°). Résultat : 2 publications à ECMR 2025 ! Validation terrain extensive dans la boue et la gloire."
                     : "First native ROS 2 framework for Unitree B1 with modular architecture. Heading-aware energy model on slopes (5°-20°). Result: 2 publications at ECMR 2025! Extensive field validation in mud and glory."
                   }
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5 md:gap-2">
                   {['ROS 2 Humble/Jazzy', 'Docker', 'C++', 'Python', 'GNSS', 'Field Tests', 'Energy Modeling'].map(tech => (
-                    <span key={tech} className={`px-4 py-2 rounded-xl font-medium ${isDark ? 'bg-gray-800 text-emerald-400' : 'bg-white text-emerald-700'} border-2 ${isDark ? 'border-emerald-500/30' : 'border-emerald-300'}`}>{tech}</span>
+                    <span key={tech} className={`px-2.5 md:px-4 py-1.5 md:py-2 rounded-lg md:rounded-xl text-xs md:text-sm font-medium ${isDark ? 'bg-gray-800 text-emerald-400' : 'bg-white text-emerald-700'} border ${isDark ? 'border-emerald-500/30' : 'border-emerald-300'}`}>{tech}</span>
                   ))}
                 </div>
               </div>
@@ -331,28 +331,28 @@ const Portfolio = () => {
           </div>
 
           {/* Peugeot Tunisia - 2024 */}
-          <div className={`p-8 rounded-3xl hover-lift ${isDark ? 'bg-gradient-to-br from-blue-950/40 to-cyan-950/40 border-2 border-blue-500/30' : 'bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-200'}`}>
-            <div className="flex items-start gap-6">
-              <div className={`p-4 rounded-2xl ${isDark ? 'bg-blue-500/20' : 'bg-blue-200'}`}>
-                <Wrench className={isDark ? 'text-blue-400' : 'text-blue-700'} size={40} />
+          <div className={`p-5 md:p-8 rounded-2xl md:rounded-3xl hover-lift ${isDark ? 'bg-gradient-to-br from-blue-950/40 to-cyan-950/40 border-2 border-blue-500/30' : 'bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-200'}`}>
+            <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6">
+              <div className={`p-3 md:p-4 rounded-xl md:rounded-2xl ${isDark ? 'bg-blue-500/20' : 'bg-blue-200'}`}>
+                <Wrench className={isDark ? 'text-blue-400' : 'text-blue-700'} size={32} />
               </div>
               <div className="flex-1">
-                <div className="flex items-center gap-3 mb-3">
-                  <h3 className="text-3xl font-black">Peugeot Tunisia</h3>
-                  <span className={`px-3 py-1 rounded-full text-sm font-bold ${isDark ? 'bg-blue-500/30 text-blue-300' : 'bg-blue-200 text-blue-900'}`}>Jun-Août 2024 🔧</span>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 md:gap-3 mb-2 md:mb-3">
+                  <h3 className="text-2xl md:text-3xl font-black">Peugeot Tunisia</h3>
+                  <span className={`px-2.5 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold w-fit ${isDark ? 'bg-blue-500/30 text-blue-300' : 'bg-blue-200 text-blue-900'}`}>Jun-Août 2024 🔧</span>
                 </div>
-                <p className={`text-xl font-bold mb-3 ${isDark ? 'text-blue-400' : 'text-blue-700'}`}>
+                <p className={`text-lg md:text-xl font-bold mb-2 md:mb-3 ${isDark ? 'text-blue-400' : 'text-blue-700'}`}>
                   {lang === 'fr' ? 'Stage Ingénieur Mécatronique' : 'Mechatronic Engineering Intern'}
                 </p>
-                <p className={`text-lg leading-relaxed mb-4 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                <p className={`text-sm md:text-lg leading-relaxed mb-3 md:mb-4 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                   {lang === 'fr'
                     ? "Amélioration de 30% de la fiabilité système et réduction de 20% du downtime via diagnostic et recalibration. Transformation digitale de la maintenance avec protocoles de tests automatisés. CAN bus, Modbus, GRAFCET."
                     : "Improved system reliability by 30% and reduced downtime by 20% through diagnostics and recalibration. Digital transformation of maintenance with automated testing protocols. CAN bus, Modbus, GRAFCET."
                   }
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5 md:gap-2">
                   {['CAN Bus', 'Modbus', 'GRAFCET', 'PLCs', 'Industrial Automation'].map(tech => (
-                    <span key={tech} className={`px-4 py-2 rounded-xl font-medium ${isDark ? 'bg-gray-800 text-blue-400' : 'bg-white text-blue-700'} border-2 ${isDark ? 'border-blue-500/30' : 'border-blue-300'}`}>{tech}</span>
+                    <span key={tech} className={`px-2.5 md:px-4 py-1.5 md:py-2 rounded-lg md:rounded-xl text-xs md:text-sm font-medium ${isDark ? 'bg-gray-800 text-blue-400' : 'bg-white text-blue-700'} border ${isDark ? 'border-blue-500/30' : 'border-blue-300'}`}>{tech}</span>
                   ))}
                 </div>
               </div>
@@ -360,28 +360,28 @@ const Portfolio = () => {
           </div>
 
           {/* Future CPC - 2023 */}
-          <div className={`p-8 rounded-3xl hover-lift ${isDark ? 'bg-gradient-to-br from-amber-950/40 to-orange-950/40 border-2 border-amber-500/30' : 'bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-200'}`}>
-            <div className="flex items-start gap-6">
-              <div className={`p-4 rounded-2xl ${isDark ? 'bg-amber-500/20' : 'bg-amber-200'}`}>
-                <Factory className={isDark ? 'text-amber-400' : 'text-amber-700'} size={40} />
+          <div className={`p-5 md:p-8 rounded-2xl md:rounded-3xl hover-lift ${isDark ? 'bg-gradient-to-br from-amber-950/40 to-orange-950/40 border-2 border-amber-500/30' : 'bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-200'}`}>
+            <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6">
+              <div className={`p-3 md:p-4 rounded-xl md:rounded-2xl ${isDark ? 'bg-amber-500/20' : 'bg-amber-200'}`}>
+                <Factory className={isDark ? 'text-amber-400' : 'text-amber-700'} size={32} />
               </div>
               <div className="flex-1">
-                <div className="flex items-center gap-3 mb-3">
-                  <h3 className="text-3xl font-black">Future CPC</h3>
-                  <span className={`px-3 py-1 rounded-full text-sm font-bold ${isDark ? 'bg-amber-500/30 text-amber-300' : 'bg-amber-200 text-amber-900'}`}>Jun-Août 2023 ⚙️</span>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 md:gap-3 mb-2 md:mb-3">
+                  <h3 className="text-2xl md:text-3xl font-black">Future CPC</h3>
+                  <span className={`px-2.5 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold w-fit ${isDark ? 'bg-amber-500/30 text-amber-300' : 'bg-amber-200 text-amber-900'}`}>Jun-Août 2023 ⚙️</span>
                 </div>
-                <p className={`text-xl font-bold mb-3 ${isDark ? 'text-amber-400' : 'text-amber-700'}`}>
+                <p className={`text-lg md:text-xl font-bold mb-2 md:mb-3 ${isDark ? 'text-amber-400' : 'text-amber-700'}`}>
                   {lang === 'fr' ? 'Stage Automatisation Industrielle' : 'Industrial Automation Intern'}
                 </p>
-                <p className={`text-lg leading-relaxed mb-4 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                <p className={`text-sm md:text-lg leading-relaxed mb-3 md:mb-4 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                   {lang === 'fr'
                     ? "Commissioning de lignes d'automatisation et déploiement de systèmes de supervision temps réel. +12% de productivité via optimisation process. Programmation PLCs (Schneider Control Expert) et design d'interfaces HMI."
                     : "Commissioned automation lines and deployed real-time supervision systems. +12% productivity through process optimization. PLC programming (Schneider Control Expert) and HMI interface design."
                   }
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5 md:gap-2">
                   {['PLCs Schneider', 'HMI Design', 'Process Optimization', 'Real-time Systems'].map(tech => (
-                    <span key={tech} className={`px-4 py-2 rounded-xl font-medium ${isDark ? 'bg-gray-800 text-amber-400' : 'bg-white text-amber-700'} border-2 ${isDark ? 'border-amber-500/30' : 'border-amber-300'}`}>{tech}</span>
+                    <span key={tech} className={`px-2.5 md:px-4 py-1.5 md:py-2 rounded-lg md:rounded-xl text-xs md:text-sm font-medium ${isDark ? 'bg-gray-800 text-amber-400' : 'bg-white text-amber-700'} border ${isDark ? 'border-amber-500/30' : 'border-amber-300'}`}>{tech}</span>
                   ))}
                 </div>
               </div>
@@ -389,20 +389,20 @@ const Portfolio = () => {
           </div>
 
           {/* RobotiClermont */}
-          <div className={`p-8 rounded-3xl hover-lift ${isDark ? 'bg-gradient-to-br from-purple-950/40 to-fuchsia-950/40 border-2 border-purple-500/30' : 'bg-gradient-to-br from-purple-50 to-fuchsia-50 border-2 border-purple-200'}`}>
-            <div className="flex items-start gap-6">
-              <div className={`p-4 rounded-2xl ${isDark ? 'bg-purple-500/20' : 'bg-purple-200'}`}>
-                <Users className={isDark ? 'text-purple-400' : 'text-purple-700'} size={40} />
+          <div className={`p-5 md:p-8 rounded-2xl md:rounded-3xl hover-lift ${isDark ? 'bg-gradient-to-br from-purple-950/40 to-fuchsia-950/40 border-2 border-purple-500/30' : 'bg-gradient-to-br from-purple-50 to-fuchsia-50 border-2 border-purple-200'}`}>
+            <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6">
+              <div className={`p-3 md:p-4 rounded-xl md:rounded-2xl ${isDark ? 'bg-purple-500/20' : 'bg-purple-200'}`}>
+                <Users className={isDark ? 'text-purple-400' : 'text-purple-700'} size={32} />
               </div>
               <div className="flex-1">
-                <div className="flex items-center gap-3 mb-3">
-                  <h3 className="text-3xl font-black">RobotiClermont</h3>
-                  <span className={`px-3 py-1 rounded-full text-sm font-bold ${isDark ? 'bg-purple-500/30 text-purple-300' : 'bg-purple-200 text-purple-900'}`}>2023-now 🚀</span>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 md:gap-3 mb-2 md:mb-3">
+                  <h3 className="text-2xl md:text-3xl font-black">RobotiClermont</h3>
+                  <span className={`px-2.5 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold w-fit ${isDark ? 'bg-purple-500/30 text-purple-300' : 'bg-purple-200 text-purple-900'}`}>2023-now 🚀</span>
                 </div>
-                <p className={`text-xl font-bold mb-3 ${isDark ? 'text-purple-400' : 'text-purple-700'}`}>
+                <p className={`text-lg md:text-xl font-bold mb-2 md:mb-3 ${isDark ? 'text-purple-400' : 'text-purple-700'}`}>
                   {lang === 'fr' ? 'Co-fondateur & Trésorier' : 'Co-founder & Treasurer'}
                 </p>
-                <p className={`text-lg leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                <p className={`text-sm md:text-lg leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                   {lang === 'fr'
                     ? "Création de l'asso robotique de l'UCA from scratch. Ateliers ROS 2 & IA, hackathons, démos publiques. Culture open-source et vulgarisation scientifique. Parce qu'apprendre seul c'est bien, ensemble c'est mieux !"
                     : "Created UCA's robotics association from scratch. ROS 2 & AI workshops, hackathons, public demos. Open-source culture and scientific outreach. Because learning alone is good, together is better!"
@@ -413,20 +413,20 @@ const Portfolio = () => {
           </div>
 
           {/* AFNEUS */}
-          <div className={`p-8 rounded-3xl hover-lift ${isDark ? 'bg-gradient-to-br from-rose-950/40 to-pink-950/40 border-2 border-rose-500/30' : 'bg-gradient-to-br from-rose-50 to-pink-50 border-2 border-rose-200'}`}>
-            <div className="flex items-start gap-6">
-              <div className={`p-4 rounded-2xl ${isDark ? 'bg-rose-500/20' : 'bg-rose-200'}`}>
-                <Heart className={isDark ? 'text-rose-400' : 'text-rose-700'} size={40} />
+          <div className={`p-5 md:p-8 rounded-2xl md:rounded-3xl hover-lift ${isDark ? 'bg-gradient-to-br from-rose-950/40 to-pink-950/40 border-2 border-rose-500/30' : 'bg-gradient-to-br from-rose-50 to-pink-50 border-2 border-rose-200'}`}>
+            <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6">
+              <div className={`p-3 md:p-4 rounded-xl md:rounded-2xl ${isDark ? 'bg-rose-500/20' : 'bg-rose-200'}`}>
+                <Heart className={isDark ? 'text-rose-400' : 'text-rose-700'} size={32} />
               </div>
               <div className="flex-1">
-                <div className="flex items-center gap-3 mb-3">
-                  <h3 className="text-3xl font-black">AFNEUS</h3>
-                  <span className={`px-3 py-1 rounded-full text-sm font-bold ${isDark ? 'bg-rose-500/30 text-rose-300' : 'bg-rose-200 text-rose-900'}`}>2024-now ⚖️</span>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 md:gap-3 mb-2 md:mb-3">
+                  <h3 className="text-2xl md:text-3xl font-black">AFNEUS</h3>
+                  <span className={`px-2.5 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold w-fit ${isDark ? 'bg-rose-500/30 text-rose-300' : 'bg-rose-200 text-rose-900'}`}>2024-now ⚖️</span>
                 </div>
-                <p className={`text-xl font-bold mb-3 ${isDark ? 'text-rose-400' : 'text-rose-700'}`}>
+                <p className={`text-lg md:text-xl font-bold mb-2 md:mb-3 ${isDark ? 'text-rose-400' : 'text-rose-700'}`}>
                   {lang === 'fr' ? 'Trésorier National & Lead Women in Science' : 'National Treasurer & Women in Science Lead'}
                 </p>
-                <p className={`text-lg leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                <p className={`text-sm md:text-lg leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                   {lang === 'fr'
                     ? "Gestion financière nationale + pilotage division Women in Science. Événements nationaux, expos, sensibilisation. Promotion de l'inclusion, l'éducation et l'innovation en STEM. L'égalité en sciences, c'est pas une option, c'est une nécessité."
                     : "National financial management + Women in Science division leadership. National events, exhibitions, awareness campaigns. Promoting inclusion, education, and innovation in STEM. Equality in science isn't optional, it's essential."
@@ -437,20 +437,20 @@ const Portfolio = () => {
           </div>
 
           {/* Student Representative */}
-          <div className={`p-8 rounded-3xl hover-lift ${isDark ? 'bg-gradient-to-br from-indigo-950/40 to-violet-950/40 border-2 border-indigo-500/30' : 'bg-gradient-to-br from-indigo-50 to-violet-50 border-2 border-indigo-200'}`}>
-            <div className="flex items-start gap-6">
-              <div className={`p-4 rounded-2xl ${isDark ? 'bg-indigo-500/20' : 'bg-indigo-200'}`}>
-                <GraduationCap className={isDark ? 'text-indigo-400' : 'text-indigo-700'} size={40} />
+          <div className={`p-5 md:p-8 rounded-2xl md:rounded-3xl hover-lift ${isDark ? 'bg-gradient-to-br from-indigo-950/40 to-violet-950/40 border-2 border-indigo-500/30' : 'bg-gradient-to-br from-indigo-50 to-violet-50 border-2 border-indigo-200'}`}>
+            <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6">
+              <div className={`p-3 md:p-4 rounded-xl md:rounded-2xl ${isDark ? 'bg-indigo-500/20' : 'bg-indigo-200'}`}>
+                <GraduationCap className={isDark ? 'text-indigo-400' : 'text-indigo-700'} size={32} />
               </div>
               <div className="flex-1">
-                <div className="flex items-center gap-3 mb-3">
-                  <h3 className="text-3xl font-black">{lang === 'fr' ? 'Élu Étudiant EUPI' : 'Student Rep EUPI'}</h3>
-                  <span className={`px-3 py-1 rounded-full text-sm font-bold ${isDark ? 'bg-indigo-500/30 text-indigo-300' : 'bg-indigo-200 text-indigo-900'}`}>2024-now 🎓</span>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 md:gap-3 mb-2 md:mb-3">
+                  <h3 className="text-2xl md:text-3xl font-black">{lang === 'fr' ? 'Élu Étudiant EUPI' : 'Student Rep EUPI'}</h3>
+                  <span className={`px-2.5 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold w-fit ${isDark ? 'bg-indigo-500/30 text-indigo-300' : 'bg-indigo-200 text-indigo-900'}`}>2024-now 🎓</span>
                 </div>
-                <p className={`text-xl font-bold mb-3 ${isDark ? 'text-indigo-400' : 'text-indigo-700'}`}>
+                <p className={`text-lg md:text-xl font-bold mb-2 md:mb-3 ${isDark ? 'text-indigo-400' : 'text-indigo-700'}`}>
                   {lang === 'fr' ? 'Représentant Étudiant - Conseil de Faculté' : 'Student Representative - Faculty Council'}
                 </p>
-                <p className={`text-lg leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                <p className={`text-sm md:text-lg leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                   {lang === 'fr'
                     ? "Défense des étudiants en robotique et ingénierie au niveau institutionnel. Amélioration pédagogique et renforcement des liens éducation-recherche. Représentation des perspectives étudiantes dans les décisions stratégiques."
                     : "Advocating for robotics and engineering students at institutional level. Pedagogical improvements and strengthening education-research ties. Representing student perspectives in strategic decisions."
@@ -1114,7 +1114,7 @@ const Portfolio = () => {
         </div>
       </nav>
 
-      <main className="pt-32 sm:pt-36 md:pt-40 pb-16 md:pb-20 px-4 md:px-6">
+      <main className="pt-40 sm:pt-44 md:pt-48 pb-16 md:pb-20 px-4 md:px-6">
         {currentPage === 'home' ? (
           <>
             <section className="py-20 relative overflow-hidden">
