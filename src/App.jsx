@@ -465,69 +465,70 @@ const Portfolio = () => {
   );
 
   const ProjectsPage = () => (
-    <div className="space-y-12 animate-fadeIn">
-      <div className="text-center mb-12">
-        <h1 className="text-6xl font-black mb-4">
+    <div className="space-y-10 md:space-y-12 animate-fadeIn">
+      <div className="text-center mb-8 md:mb-12 px-4">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-3 md:mb-4">
           <span className={isDark ? 'text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-cyan-400 to-blue-400 animate-gradient' : 'text-transparent bg-clip-text bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 animate-gradient'}>
             {lang === 'fr' ? 'Mes Créations' : 'My Creations'}
           </span>
         </h1>
-        <p className={`text-xl ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+        <p className={`text-lg md:text-xl ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
           {lang === 'fr' ? 'Code, robots, et idées folles' : 'Code, robots, and crazy ideas'}
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {/* Resilience Analysis - Ongoing Research */}
-        <div className={`group p-8 rounded-3xl hover-lift ${isDark ? 'bg-gradient-to-br from-red-950/40 to-rose-950/40 border-2 border-red-500/30' : 'bg-gradient-to-br from-red-50 to-rose-50 border-2 border-red-200'}`}>
-          <div className="flex items-center gap-4 mb-4">
-            <Trophy size={48} className={`${isDark ? 'text-red-400' : 'text-red-600'} group-hover:animate-float`} />
+        <div className={`group p-6 md:p-8 rounded-2xl md:rounded-3xl hover-lift ${isDark ? 'bg-gradient-to-br from-red-950/40 to-rose-950/40 border-2 border-red-500/30' : 'bg-gradient-to-br from-red-50 to-rose-50 border-2 border-red-200'}`}>
+          <div className="flex items-start sm:items-center gap-3 md:gap-4 mb-3 md:mb-4">
+            <Trophy size={36} className={`md:hidden flex-shrink-0 ${isDark ? 'text-red-400' : 'text-red-600'} group-hover:animate-float`} />
+            <Trophy size={48} className={`hidden md:block flex-shrink-0 ${isDark ? 'text-red-400' : 'text-red-600'} group-hover:animate-float`} />
             <div>
-              <h3 className="text-3xl font-black">{lang === 'fr' ? 'Analyse de Résilience' : 'Resilience Analysis'}</h3>
-              <span className={`inline-block px-3 py-1 rounded-full text-sm font-bold mt-2 ${isDark ? 'bg-red-500/30 text-red-300' : 'bg-red-200 text-red-900'}`}>
+              <h3 className="text-2xl md:text-3xl font-black leading-tight">{lang === 'fr' ? 'Analyse de Résilience' : 'Resilience Analysis'}</h3>
+              <span className={`inline-block px-2.5 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold mt-1.5 md:mt-2 ${isDark ? 'bg-red-500/30 text-red-300' : 'bg-red-200 text-red-900'}`}>
                 🔬 {lang === 'fr' ? 'Recherche M2 en cours' : 'M2 Research Ongoing'}
               </span>
             </div>
           </div>
-          <p className={`text-lg leading-relaxed mb-4 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+          <p className={`text-base md:text-lg leading-relaxed mb-3 md:mb-4 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
             {lang === 'fr'
               ? "Extension du framework ICP certifié pour quantifier la résilience des systèmes de localisation multi-capteurs (LiDAR, UWB, IMU, vision, radar) face aux corruptions adversariales. Prédiction des erreurs de pose worst-case et certification de sécurité de cartes avant déploiement."
               : "Extending certified ICP framework to quantify resilience of multi-sensor localization systems (LiDAR, UWB, IMU, vision, radar) under adversarial corruption. Predicting worst-case pose errors and certifying map safety before deployment."
             }
           </p>
-          <div className="flex gap-2 flex-wrap">
+          <div className="flex gap-1.5 md:gap-2 flex-wrap">
             {['ICP', 'Multi-Sensor Fusion', 'Safety Certification', 'Adversarial Robustness'].map(tag => (
-              <span key={tag} className={`px-3 py-1 rounded-lg text-sm font-medium ${isDark ? 'bg-gray-800 text-red-400' : 'bg-white text-red-700'}`}>{tag}</span>
+              <span key={tag} className={`px-2.5 md:px-3 py-1 rounded-lg text-xs md:text-sm font-medium ${isDark ? 'bg-gray-800 text-red-400' : 'bg-white text-red-700'}`}>{tag}</span>
             ))}
           </div>
         </div>
 
         {/* PolliNexus */}
-        <div className={`group p-8 rounded-3xl hover-lift ${isDark ? 'bg-gradient-to-br from-yellow-950/40 to-amber-950/40 border-2 border-yellow-500/30' : 'bg-gradient-to-br from-yellow-50 to-amber-50 border-2 border-yellow-200'}`}>
-          <div className="flex items-center gap-4 mb-4">
-            <span className="text-5xl group-hover:animate-bounce">🐝</span>
+        <div className={`group p-6 md:p-8 rounded-2xl md:rounded-3xl hover-lift ${isDark ? 'bg-gradient-to-br from-yellow-950/40 to-amber-950/40 border-2 border-yellow-500/30' : 'bg-gradient-to-br from-yellow-50 to-amber-50 border-2 border-yellow-200'}`}>
+          <div className="flex items-start sm:items-center gap-3 md:gap-4 mb-3 md:mb-4">
+            <span className="text-4xl md:text-5xl flex-shrink-0 group-hover:animate-bounce">🐝</span>
             <div>
-              <h3 className="text-3xl font-black">PolliNexus</h3>
-              <span className={`inline-block px-3 py-1 rounded-full text-sm font-bold mt-2 ${isDark ? 'bg-yellow-500/30 text-yellow-300' : 'bg-yellow-200 text-yellow-900'}`}>
+              <h3 className="text-2xl md:text-3xl font-black leading-tight">PolliNexus</h3>
+              <span className={`inline-block px-2.5 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold mt-1.5 md:mt-2 ${isDark ? 'bg-yellow-500/30 text-yellow-300' : 'bg-yellow-200 text-yellow-900'}`}>
                 🏆 {lang === 'fr' ? 'Prix Régional DD 2024' : 'Regional Sustainability Award 2024'}
               </span>
             </div>
           </div>
-          <p className={`text-lg leading-relaxed mb-4 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+          <p className={`text-base md:text-lg leading-relaxed mb-3 md:mb-4 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
             {lang === 'fr'
               ? "Drone autonome intelligent de pollinisation écologique pour préservation de la biodiversité. Navigation basée vision et atterrissage de précision pour applications de conservation environnementale. Parce que les abeilles ont besoin d'aide, et que les robots peuvent être écolo."
               : "Intelligent autonomous drone for ecological pollination and biodiversity preservation. Vision-based navigation and precision landing for environmental conservation applications. Because bees need help, and robots can be eco-friendly."
             }
           </p>
-          <div className="flex gap-2 flex-wrap">
+          <div className="flex gap-1.5 md:gap-2 flex-wrap">
             {['Vision', 'Autonomy', 'Ecology', 'Precision Landing', 'Conservation'].map(tag => (
-              <span key={tag} className={`px-3 py-1 rounded-lg text-sm font-medium ${isDark ? 'bg-gray-800 text-yellow-400' : 'bg-white text-yellow-700'}`}>{tag}</span>
+              <span key={tag} className={`px-2.5 md:px-3 py-1 rounded-lg text-xs md:text-sm font-medium ${isDark ? 'bg-gray-800 text-yellow-400' : 'bg-white text-yellow-700'}`}>{tag}</span>
             ))}
           </div>
         </div>
 
         {/* Teach & Repeat */}
-        <div className={`group p-8 rounded-3xl hover-lift ${isDark ? 'bg-gradient-to-br from-cyan-950/40 to-blue-950/40 border-2 border-cyan-500/30' : 'bg-gradient-to-br from-cyan-50 to-blue-50 border-2 border-cyan-200'}`}>
+        <div className={`group p-6 md:p-8 rounded-2xl md:rounded-3xl hover-lift ${isDark ? 'bg-gradient-to-br from-cyan-950/40 to-blue-950/40 border-2 border-cyan-500/30' : 'bg-gradient-to-br from-cyan-50 to-blue-50 border-2 border-cyan-200'}`}>
           <div className="flex items-center gap-4 mb-4">
             <Rocket size={48} className={`${isDark ? 'text-cyan-400' : 'text-cyan-600'} group-hover:animate-float`} />
             <h3 className="text-3xl font-black">Teach & Repeat</h3>
@@ -723,12 +724,24 @@ const Portfolio = () => {
                 <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} mb-2`}>
                   <strong>M. Ounally</strong>, C. Pierre, J. Laconte
                 </p>
-                <p className={`text-sm italic ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+                <p className={`text-sm italic ${isDark ? 'text-gray-400' : 'text-gray-600'} mb-3`}>
                   {lang === 'fr'
                     ? '3D-AdViCE Workshop, European Conference on Mobile Robots (ECMR), Padoue, Italie'
                     : '3D-AdViCE Workshop, European Conference on Mobile Robots (ECMR), Padua, Italy'
                   }
                 </p>
+                <div className="flex flex-wrap gap-3">
+                  <a href="/cv/ecmr2025_energy_prediction.pdf" target="_blank" rel="noopener noreferrer"
+                     className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all hover:scale-105 ${isDark ? 'bg-purple-500/20 text-purple-300 hover:bg-purple-500/30' : 'bg-purple-100 text-purple-700 hover:bg-purple-200'}`}>
+                    <FileText size={18} />
+                    {lang === 'fr' ? 'Télécharger PDF' : 'Download PDF'}
+                  </a>
+                  <a href="https://www.inrae.fr/en/centres/auvergne-rhone-alpes-clermont-ferrand" target="_blank" rel="noopener noreferrer"
+                     className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all hover:scale-105 ${isDark ? 'bg-teal-500/20 text-teal-300 hover:bg-teal-500/30' : 'bg-teal-100 text-teal-700 hover:bg-teal-200'}`}>
+                    <ExternalLink size={18} />
+                    INRAE TSCF
+                  </a>
+                </div>
               </div>
               <div className={`p-6 rounded-2xl ${isDark ? 'bg-teal-950/30 border-l-4 border-teal-500' : 'bg-teal-50 border-l-4 border-teal-600'}`}>
                 <div className="flex items-start gap-3 mb-3">
@@ -743,12 +756,24 @@ const Portfolio = () => {
                 <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} mb-2`}>
                   W. Dubois, <strong>M. Ounally</strong>, J. Laconte
                 </p>
-                <p className={`text-sm italic ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+                <p className={`text-sm italic ${isDark ? 'text-gray-400' : 'text-gray-600'} mb-3`}>
                   {lang === 'fr'
                     ? '3D-AdViCE Workshop, European Conference on Mobile Robots (ECMR), Clermont-Ferrand, France'
                     : '3D-AdViCE Workshop, European Conference on Mobile Robots (ECMR), Clermont-Ferrand, France'
                   }
                 </p>
+                <div className="flex flex-wrap gap-3">
+                  <a href="/cv/ecmr2025_cave_mapping.pdf" target="_blank" rel="noopener noreferrer"
+                     className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all hover:scale-105 ${isDark ? 'bg-teal-500/20 text-teal-300 hover:bg-teal-500/30' : 'bg-teal-100 text-teal-700 hover:bg-teal-200'}`}>
+                    <FileText size={18} />
+                    {lang === 'fr' ? 'Télécharger PDF' : 'Download PDF'}
+                  </a>
+                  <a href="https://www.inrae.fr/en/centres/auvergne-rhone-alpes-clermont-ferrand" target="_blank" rel="noopener noreferrer"
+                     className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all hover:scale-105 ${isDark ? 'bg-emerald-500/20 text-emerald-300 hover:bg-emerald-500/30' : 'bg-emerald-100 text-emerald-700 hover:bg-emerald-200'}`}>
+                    <ExternalLink size={18} />
+                    INRAE TSCF
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -804,23 +829,106 @@ const Portfolio = () => {
               </li>
             </ul>
           </div>
+
+          {/* References Section */}
+          <div>
+            <h3 className={`text-3xl font-black mb-6 flex items-center gap-3 ${isDark ? 'text-indigo-400' : 'text-indigo-600'}`}>
+              <Users size={36} />
+              {lang === 'fr' ? 'Références Académiques & Professionnelles' : 'Academic & Professional References'}
+            </h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Prof. Benoît Thuilot */}
+              <div className={`p-6 rounded-2xl ${isDark ? 'bg-indigo-950/30 border-l-4 border-indigo-500' : 'bg-indigo-50 border-l-4 border-indigo-600'}`}>
+                <h4 className="text-xl font-bold mb-2">Prof. Benoît THUILOT</h4>
+                <p className={`text-sm mb-2 ${isDark ? 'text-indigo-400' : 'text-indigo-600'}`}>
+                  {lang === 'fr' ? 'Professeur' : 'Professor'}
+                </p>
+                <p className={`text-sm mb-3 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+                  {lang === 'fr' ? 'Responsable du Master Robotique' : 'Head of Robotics Master\'s Program'}
+                  <br />Université Clermont Auvergne
+                </p>
+                <a href="mailto:benoit.thuilot@uca.fr" className={`text-sm font-medium hover:underline ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>
+                  benoit.thuilot@uca.fr
+                </a>
+              </div>
+
+              {/* Dr. Johann Laconte */}
+              <div className={`p-6 rounded-2xl ${isDark ? 'bg-emerald-950/30 border-l-4 border-emerald-500' : 'bg-emerald-50 border-l-4 border-emerald-600'}`}>
+                <h4 className="text-xl font-bold mb-2">Dr. Johann LACONTE</h4>
+                <p className={`text-sm mb-2 ${isDark ? 'text-emerald-400' : 'text-emerald-600'}`}>
+                  {lang === 'fr' ? 'Chercheur Scientifique' : 'Research Scientist'}
+                </p>
+                <p className={`text-sm mb-3 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+                  Junior Research Chair in Robotics
+                  <br />
+                  <a href="https://www.inrae.fr/en/centres/auvergne-rhone-alpes-clermont-ferrand" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                    INRAE TSCF • {lang === 'fr' ? 'Clermont-Ferrand' : 'Clermont-Ferrand'}
+                  </a>
+                </p>
+                <a href="mailto:johann.laconte@inrae.fr" className={`text-sm font-medium hover:underline ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>
+                  johann.laconte@inrae.fr
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Links & Resources */}
+          <div className={`p-8 rounded-2xl ${isDark ? 'bg-gradient-to-r from-cyan-950/40 to-blue-950/40 border-2 border-cyan-500/30' : 'bg-gradient-to-r from-cyan-50 to-blue-50 border-2 border-cyan-200'}`}>
+            <h3 className={`text-2xl font-black mb-4 flex items-center gap-3 ${isDark ? 'text-cyan-400' : 'text-cyan-600'}`}>
+              <Globe size={28} />
+              {lang === 'fr' ? 'Laboratoires & Organisations' : 'Labs & Organizations'}
+            </h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              <a href="https://www.inrae.fr/en/centres/auvergne-rhone-alpes-clermont-ferrand" target="_blank" rel="noopener noreferrer" 
+                 className={`flex items-center gap-3 p-4 rounded-xl transition-all hover:scale-105 ${isDark ? 'bg-gray-800/50 hover:bg-gray-700/50' : 'bg-white hover:bg-gray-50'}`}>
+                <ExternalLink size={20} className={isDark ? 'text-cyan-400' : 'text-cyan-600'} />
+                <div>
+                  <p className="font-bold">INRAE TSCF</p>
+                  <p className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>Technologies et Systèmes d'Information</p>
+                </div>
+              </a>
+              <a href="https://www.uca.fr" target="_blank" rel="noopener noreferrer" 
+                 className={`flex items-center gap-3 p-4 rounded-xl transition-all hover:scale-105 ${isDark ? 'bg-gray-800/50 hover:bg-gray-700/50' : 'bg-white hover:bg-gray-50'}`}>
+                <ExternalLink size={20} className={isDark ? 'text-cyan-400' : 'text-cyan-600'} />
+                <div>
+                  <p className="font-bold">Université Clermont Auvergne</p>
+                  <p className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>Master PAR - Robotique</p>
+                </div>
+              </a>
+              <a href="https://afneus.org" target="_blank" rel="noopener noreferrer" 
+                 className={`flex items-center gap-3 p-4 rounded-xl transition-all hover:scale-105 ${isDark ? 'bg-gray-800/50 hover:bg-gray-700/50' : 'bg-white hover:bg-gray-50'}`}>
+                <ExternalLink size={20} className={isDark ? 'text-cyan-400' : 'text-cyan-600'} />
+                <div>
+                  <p className="font-bold">AFNEUS</p>
+                  <p className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{lang === 'fr' ? 'Fédération Nationale Associations Étudiantes' : 'National Student Federation'}</p>
+                </div>
+              </a>
+              <div className={`flex items-center gap-3 p-4 rounded-xl ${isDark ? 'bg-gray-800/50' : 'bg-white'}`}>
+                <Sparkles size={20} className={isDark ? 'text-cyan-400' : 'text-cyan-600'} />
+                <div>
+                  <p className="font-bold">RobotiClermont</p>
+                  <p className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>{lang === 'fr' ? 'Association Robotique UCA' : 'UCA Robotics Association'}</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 
   const ContactPage = () => (
-    <div className="max-w-4xl mx-auto space-y-12 animate-fadeIn">
-      <div className="text-center space-y-6">
+    <div className="max-w-4xl mx-auto space-y-10 md:space-y-12 animate-fadeIn">
+      <div className="text-center space-y-4 md:space-y-6">
         <div className="inline-block animate-float">
-          <span className="text-8xl">📡</span>
+          <span className="text-6xl md:text-8xl">📡</span>
         </div>
-        <h1 className="text-6xl font-black">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-black px-4">
           <span className={isDark ? 'text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-rose-400 to-purple-400 animate-gradient' : 'text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-rose-600 to-purple-600 animate-gradient'}>
             {lang === 'fr' ? 'Parlons-en !' : 'Let\'s Talk!'}
           </span>
         </h1>
-        <p className={`text-2xl ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+        <p className={`text-lg sm:text-xl md:text-2xl px-4 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
           {lang === 'fr' 
             ? 'Projet, collab, ou juste envie de parler robots ? Je suis tout ouïe !'
             : 'Project, collab, or just want to chat about robots? I\'m all ears!'
@@ -828,48 +936,53 @@ const Portfolio = () => {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid sm:grid-cols-2 gap-4 md:gap-8">
         <a href="mailto:Mohamed_Dhia.OUNALLY@etu.uca.fr" 
            title={t.hoverMessages.email}
-           className={`group p-10 rounded-3xl hover-lift text-center ${isDark ? 'bg-gradient-to-br from-cyan-950/40 to-blue-950/40 border-2 border-cyan-500/30' : 'bg-gradient-to-br from-cyan-50 to-blue-50 border-2 border-cyan-200'}`}>
-          <Mail size={64} className={`mx-auto mb-6 ${isDark ? 'text-cyan-400' : 'text-cyan-600'} group-hover:animate-bounce`} />
-          <h3 className="text-2xl font-black mb-3">Email</h3>
-          <p className={`text-lg ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>Mohamed_Dhia.OUNALLY@etu.uca.fr</p>
-          <p className={`text-sm mt-2 ${isDark ? 'text-cyan-400' : 'text-cyan-600'}`}>{t.hoverMessages.email}</p>
+           className={`group p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl hover-lift text-center active:scale-95 ${isDark ? 'bg-gradient-to-br from-cyan-950/40 to-blue-950/40 border-2 border-cyan-500/30' : 'bg-gradient-to-br from-cyan-50 to-blue-50 border-2 border-cyan-200'}`}>
+          <Mail size={48} className={`mx-auto mb-4 sm:mb-6 md:hidden ${isDark ? 'text-cyan-400' : 'text-cyan-600'} group-hover:animate-bounce`} />
+          <Mail size={64} className={`mx-auto mb-6 hidden md:block ${isDark ? 'text-cyan-400' : 'text-cyan-600'} group-hover:animate-bounce`} />
+          <h3 className="text-xl md:text-2xl font-black mb-2 md:mb-3">Email</h3>
+          <p className={`text-base md:text-lg ${isDark ? 'text-gray-300' : 'text-gray-700'} break-words`}>Mohamed_Dhia.OUNALLY@etu.uca.fr</p>
+          <p className={`text-xs md:text-sm mt-2 ${isDark ? 'text-cyan-400' : 'text-cyan-600'}`}>{t.hoverMessages.email}</p>
         </a>
 
         <a href="https://calendar.app.google/ifiADuHqsBjtmnLYA" target="_blank" rel="noopener noreferrer"
-           className={`group p-10 rounded-3xl hover-lift text-center ${isDark ? 'bg-gradient-to-br from-emerald-950/40 to-teal-950/40 border-2 border-emerald-500/30' : 'bg-gradient-to-br from-emerald-50 to-teal-50 border-2 border-emerald-200'}`}>
-          <Calendar size={64} className={`mx-auto mb-6 ${isDark ? 'text-emerald-400' : 'text-emerald-600'} group-hover:animate-bounce`} />
-          <h3 className="text-2xl font-black mb-3">{lang === 'fr' ? 'Prendre RDV' : 'Book Meeting'}</h3>
-          <p className={`text-lg ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{lang === 'fr' ? 'Google Agenda' : 'Google Calendar'}</p>
-          <p className={`text-sm mt-2 ${isDark ? 'text-emerald-400' : 'text-emerald-600'}`}>{lang === 'fr' ? 'Choisissez votre créneau' : 'Pick your time slot'}</p>
+           className={`group p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl hover-lift text-center active:scale-95 ${isDark ? 'bg-gradient-to-br from-emerald-950/40 to-teal-950/40 border-2 border-emerald-500/30' : 'bg-gradient-to-br from-emerald-50 to-teal-50 border-2 border-emerald-200'}`}>
+          <Calendar size={48} className={`mx-auto mb-4 sm:mb-6 md:hidden ${isDark ? 'text-emerald-400' : 'text-emerald-600'} group-hover:animate-bounce`} />
+          <Calendar size={64} className={`mx-auto mb-6 hidden md:block ${isDark ? 'text-emerald-400' : 'text-emerald-600'} group-hover:animate-bounce`} />
+          <h3 className="text-xl md:text-2xl font-black mb-2 md:mb-3">{lang === 'fr' ? 'Prendre RDV' : 'Book Meeting'}</h3>
+          <p className={`text-base md:text-lg ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{lang === 'fr' ? 'Google Agenda' : 'Google Calendar'}</p>
+          <p className={`text-xs md:text-sm mt-2 ${isDark ? 'text-emerald-400' : 'text-emerald-600'}`}>{lang === 'fr' ? 'Choisissez votre créneau' : 'Pick your time slot'}</p>
         </a>
 
         <a href="https://teams.live.com/meet/9363630244290?p=JSw1xy1wBs8lnMQQJi" target="_blank" rel="noopener noreferrer"
-           className={`group p-10 rounded-3xl hover-lift text-center ${isDark ? 'bg-gradient-to-br from-purple-950/40 to-fuchsia-950/40 border-2 border-purple-500/30' : 'bg-gradient-to-br from-purple-50 to-fuchsia-50 border-2 border-purple-200'}`}>
-          <Video size={64} className={`mx-auto mb-6 ${isDark ? 'text-purple-400' : 'text-purple-600'} group-hover:animate-bounce`} />
-          <h3 className="text-2xl font-black mb-3">Microsoft Teams</h3>
-          <p className={`text-lg ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{lang === 'fr' ? 'Rejoindre la réunion' : 'Join the meeting'}</p>
-          <p className={`text-sm mt-2 ${isDark ? 'text-purple-400' : 'text-purple-600'}`}>{lang === 'fr' ? 'Visio instantanée' : 'Instant video call'}</p>
+           className={`group p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl hover-lift text-center active:scale-95 ${isDark ? 'bg-gradient-to-br from-purple-950/40 to-fuchsia-950/40 border-2 border-purple-500/30' : 'bg-gradient-to-br from-purple-50 to-fuchsia-50 border-2 border-purple-200'}`}>
+          <Video size={48} className={`mx-auto mb-4 sm:mb-6 md:hidden ${isDark ? 'text-purple-400' : 'text-purple-600'} group-hover:animate-bounce`} />
+          <Video size={64} className={`mx-auto mb-6 hidden md:block ${isDark ? 'text-purple-400' : 'text-purple-600'} group-hover:animate-bounce`} />
+          <h3 className="text-xl md:text-2xl font-black mb-2 md:mb-3">Microsoft Teams</h3>
+          <p className={`text-base md:text-lg ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{lang === 'fr' ? 'Rejoindre la réunion' : 'Join the meeting'}</p>
+          <p className={`text-xs md:text-sm mt-2 ${isDark ? 'text-purple-400' : 'text-purple-600'}`}>{lang === 'fr' ? 'Visio instantanée' : 'Instant video call'}</p>
         </a>
 
         <a href="https://github.com/moounally" target="_blank" rel="noopener noreferrer"
            title={t.hoverMessages.github}
-           className={`group p-10 rounded-3xl hover-lift text-center ${isDark ? 'bg-gradient-to-br from-gray-900 to-gray-950 border-2 border-gray-700' : 'bg-gradient-to-br from-gray-200 to-gray-300 border-2 border-gray-400'}`}>
-          <Github size={64} className={`mx-auto mb-6 ${isDark ? 'text-gray-400' : 'text-gray-700'} group-hover:animate-bounce`} />
-          <h3 className="text-2xl font-black mb-3">GitHub</h3>
-          <p className={`text-lg ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>@moounally</p>
-          <p className={`text-sm mt-2 ${isDark ? 'text-gray-500' : 'text-gray-600'}`}>{t.hoverMessages.github}</p>
+           className={`group p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl hover-lift text-center active:scale-95 ${isDark ? 'bg-gradient-to-br from-gray-900 to-gray-950 border-2 border-gray-700' : 'bg-gradient-to-br from-gray-200 to-gray-300 border-2 border-gray-400'}`}>
+          <Github size={48} className={`mx-auto mb-4 sm:mb-6 md:hidden ${isDark ? 'text-gray-400' : 'text-gray-700'} group-hover:animate-bounce`} />
+          <Github size={64} className={`mx-auto mb-6 hidden md:block ${isDark ? 'text-gray-400' : 'text-gray-700'} group-hover:animate-bounce`} />
+          <h3 className="text-xl md:text-2xl font-black mb-2 md:mb-3">GitHub</h3>
+          <p className={`text-base md:text-lg ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>@moounally</p>
+          <p className={`text-xs md:text-sm mt-2 ${isDark ? 'text-gray-500' : 'text-gray-600'}`}>{t.hoverMessages.github}</p>
         </a>
 
         <a href="https://linkedin.com/in/mohamed-dhia-ounally" target="_blank" rel="noopener noreferrer"
            title={t.hoverMessages.linkedin}
-           className={`group p-10 rounded-3xl hover-lift text-center ${isDark ? 'bg-gradient-to-br from-blue-950/40 to-indigo-950/40 border-2 border-blue-500/30' : 'bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200'}`}>
-          <Linkedin size={64} className={`mx-auto mb-6 ${isDark ? 'text-blue-400' : 'text-blue-600'} group-hover:animate-bounce`} />
-          <h3 className="text-2xl font-black mb-3">LinkedIn</h3>
-          <p className={`text-lg ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>Mohamed Dhia OUNALLY</p>
-          <p className={`text-sm mt-2 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>{t.hoverMessages.linkedin}</p>
+           className={`group p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl hover-lift text-center active:scale-95 ${isDark ? 'bg-gradient-to-br from-blue-950/40 to-indigo-950/40 border-2 border-blue-500/30' : 'bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200'}`}>
+          <Linkedin size={48} className={`mx-auto mb-4 sm:mb-6 md:hidden ${isDark ? 'text-blue-400' : 'text-blue-600'} group-hover:animate-bounce`} />
+          <Linkedin size={64} className={`mx-auto mb-6 hidden md:block ${isDark ? 'text-blue-400' : 'text-blue-600'} group-hover:animate-bounce`} />
+          <h3 className="text-xl md:text-2xl font-black mb-2 md:mb-3">LinkedIn</h3>
+          <p className={`text-base md:text-lg ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>Mohamed Dhia OUNALLY</p>
+          <p className={`text-xs md:text-sm mt-2 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>{t.hoverMessages.linkedin}</p>
         </a>
 
         {/* Hidden for now - Scholar & ResearchGate */}
@@ -963,36 +1076,37 @@ const Portfolio = () => {
         </div>
       )}
 
-      <nav className={`fixed top-0 w-full z-40 transition-all duration-500 glass ${scrollY > 50 || currentPage !== 'home' ? (isDark ? 'bg-gray-950/90 shadow-2xl border-b-2 border-orange-500/20' : 'bg-white/90 shadow-2xl border-b-2 border-orange-200') : ''}`}>
-        <div className="max-w-7xl mx-auto px-4 py-4">
+      <nav className={`fixed top-0 w-full z-40 transition-all duration-500 glass ${scrollY > 50 || currentPage !== 'home' ? (isDark ? 'bg-gray-950/95 shadow-2xl border-b-2 border-orange-500/20' : 'bg-white/95 shadow-2xl border-b-2 border-orange-200') : ''} backdrop-blur-md`}>
+        <div className="max-w-7xl mx-auto px-3 md:px-4 py-3 md:py-4">
           {/* Top bar with logo and controls */}
-          <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center justify-between mb-3 md:mb-4">
             <button onClick={() => { setCurrentPage('home'); setMobileMenuOpen(false); }} 
-                    className="group font-black text-2xl md:text-3xl hover:scale-110 transition-all duration-300 flex items-center gap-2">
+                    className="group font-black text-xl sm:text-2xl md:text-3xl hover:scale-110 active:scale-95 transition-all duration-300 flex items-center gap-2">
               <span className={`${isDark ? 'text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-rose-400 to-purple-400 animate-gradient' : 'text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-rose-600 to-purple-600 animate-gradient'}`}>
                 The Café Coder
               </span>
-              <span className="text-2xl animate-float">☕</span>
+              <span className="text-xl md:text-2xl animate-float">☕</span>
             </button>
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 md:gap-3">
               <button onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
-                      className={`px-4 py-2 rounded-xl font-black text-base transition-all duration-300 hover:scale-110 ${isDark ? 'bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-500 hover:to-cyan-500' : 'bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600'} text-white shadow-lg`}>
+                      className={`px-3 md:px-4 py-2 rounded-xl font-black text-sm md:text-base transition-all duration-300 hover:scale-110 active:scale-95 ${isDark ? 'bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-500 hover:to-cyan-500' : 'bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600'} text-white shadow-lg`}>
                 {lang.toUpperCase()}
               </button>
               <button onClick={() => setIsDark(!isDark)}
-                      className={`p-2 rounded-xl transition-all duration-300 hover:scale-110 hover:rotate-180 ${isDark ? 'bg-yellow-500/20 text-yellow-400 hover:bg-yellow-500/30' : 'bg-orange-200 text-orange-700 hover:bg-orange-300'} shadow-lg`}>
-                {isDark ? <Sun size={20} /> : <Moon size={20} />}
+                      className={`p-2 rounded-xl transition-all duration-300 hover:scale-110 active:scale-95 hover:rotate-180 ${isDark ? 'bg-yellow-500/20 text-yellow-400 hover:bg-yellow-500/30' : 'bg-orange-200 text-orange-700 hover:bg-orange-300'} shadow-lg`}>
+                {isDark ? <Sun size={18} className="md:hidden" /> : <Moon size={18} className="md:hidden" />}
+                {isDark ? <Sun size={20} className="hidden md:block" /> : <Moon size={20} className="hidden md:block" />}
               </button>
             </div>
           </div>
 
-          {/* Navigation buttons - ALWAYS VISIBLE */}
-          <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
+          {/* Navigation buttons - Optimized for mobile */}
+          <div className="grid grid-cols-3 sm:grid-cols-6 gap-1.5 md:gap-2">
             {Object.entries(t.nav).map(([key, label]) => (
               <button key={key} 
                       onClick={() => setCurrentPage(key)}
-                      className={`px-3 py-2 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 hover:scale-105 ${currentPage === key ? (isDark ? 'bg-gradient-to-r from-orange-600 to-rose-600 text-white shadow-lg' : 'bg-gradient-to-r from-orange-500 to-rose-500 text-white shadow-lg') : (isDark ? 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/70' : 'bg-gray-100 text-gray-700 hover:bg-gray-200')}`}>
+                      className={`px-2 md:px-3 py-2.5 md:py-2 rounded-lg md:rounded-xl font-bold text-xs sm:text-sm md:text-base transition-all duration-300 hover:scale-105 active:scale-95 ${currentPage === key ? (isDark ? 'bg-gradient-to-r from-orange-600 to-rose-600 text-white shadow-lg' : 'bg-gradient-to-r from-orange-500 to-rose-500 text-white shadow-lg') : (isDark ? 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/70' : 'bg-gray-100 text-gray-700 hover:bg-gray-200')}`}>
                 {label}
               </button>
             ))}
@@ -1000,7 +1114,7 @@ const Portfolio = () => {
         </div>
       </nav>
 
-      <main className="pt-36 md:pt-40 pb-20 px-6">
+      <main className="pt-32 sm:pt-36 md:pt-40 pb-16 md:pb-20 px-4 md:px-6">
         {currentPage === 'home' ? (
           <>
             <section className="py-20 relative overflow-hidden">
@@ -1010,12 +1124,12 @@ const Portfolio = () => {
                 <div className={`absolute top-1/2 left-1/2 w-96 h-96 ${isDark ? 'bg-purple-500' : 'bg-purple-300'} rounded-full blur-3xl animate-pulse`} style={{animationDelay: '2s'}}></div>
               </div>
 
-              <div className="max-w-6xl mx-auto relative text-center space-y-10">
-                <div className="space-y-6">
+              <div className="max-w-6xl mx-auto relative text-center space-y-8 md:space-y-10">
+                <div className="space-y-4 md:space-y-6">
                   <div className="inline-block animate-bounce">
-                    <span className="text-8xl">👋</span>
+                    <span className="text-6xl md:text-8xl">👋</span>
                   </div>
-                  <h1 className="text-7xl md:text-9xl font-black tracking-tight leading-tight">
+                  <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-black tracking-tight leading-tight px-2">
                     Mohamed Dhia
                     <br/>
                     <span className={`${isDark ? 'text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-rose-400 to-purple-400 animate-gradient' : 'text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-rose-600 to-purple-600 animate-gradient'}`}>
@@ -1023,53 +1137,57 @@ const Portfolio = () => {
                     </span>
                   </h1>
                   
-                  <p className={`text-3xl md:text-4xl font-black ${isDark ? 'text-orange-400' : 'text-orange-600'}`}>
+                  <p className={`text-2xl sm:text-3xl md:text-4xl font-black ${isDark ? 'text-orange-400' : 'text-orange-600'} px-4`}>
                     {t.tagline}
                   </p>
                   
-                  <p className={`text-2xl md:text-3xl font-bold ${isDark ? 'text-teal-400' : 'text-teal-600'}`}>
+                  <p className={`text-xl sm:text-2xl md:text-3xl font-bold ${isDark ? 'text-teal-400' : 'text-teal-600'} px-4`}>
                     {t.subtitle}
                   </p>
                 </div>
 
-                <div className="max-w-4xl mx-auto">
-                  <p className={`text-xl leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                <div className="max-w-4xl mx-auto px-4">
+                  <p className={`text-lg sm:text-xl leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                     {t.intro}
                   </p>
                 </div>
 
-                <div className="space-y-4">
-                  <div className={`inline-block px-8 py-4 rounded-full text-lg font-bold ${isDark ? 'bg-gradient-to-r from-yellow-500/20 to-amber-500/20 text-yellow-300 border-2 border-yellow-500/30' : 'bg-gradient-to-r from-yellow-100 to-amber-100 text-yellow-800 border-2 border-yellow-300'} animate-pulse`}>
+                <div className="space-y-3 md:space-y-4 px-4">
+                  <div className={`inline-block px-6 md:px-8 py-3 md:py-4 rounded-full text-base md:text-lg font-bold ${isDark ? 'bg-gradient-to-r from-yellow-500/20 to-amber-500/20 text-yellow-300 border-2 border-yellow-500/30' : 'bg-gradient-to-r from-yellow-100 to-amber-100 text-yellow-800 border-2 border-yellow-300'} animate-pulse max-w-full`}>
                     {funFact || t.funFacts[0]}
                   </div>
-                  <button onClick={changeFunFact} className={`text-sm font-bold px-4 py-2 rounded-full transition-all hover:scale-110 ${isDark ? 'text-yellow-400 hover:text-yellow-300' : 'text-yellow-700 hover:text-yellow-600'}`}>
+                  <button onClick={changeFunFact} className={`text-sm font-bold px-4 py-2 rounded-full transition-all hover:scale-110 active:scale-95 ${isDark ? 'text-yellow-400 hover:text-yellow-300' : 'text-yellow-700 hover:text-yellow-600'}`}>
                     🔄 {lang === 'fr' ? 'Autre fun fact ?' : 'Another fun fact?'}
                   </button>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-6 justify-center pt-6">
+                <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center pt-4 md:pt-6 px-4">
                   <button onClick={() => setCurrentPage('projects')}
-                          className={`group px-10 py-5 rounded-2xl font-black text-xl transition-all duration-300 transform hover:scale-110 ${isDark ? 'bg-gradient-to-r from-orange-600 to-rose-600 hover:from-orange-500 hover:to-rose-500' : 'bg-gradient-to-r from-orange-500 to-rose-500 hover:from-orange-600 hover:to-rose-600'} text-white shadow-2xl flex items-center justify-center gap-3`}>
+                          className={`group px-8 md:px-10 py-4 md:py-5 rounded-2xl font-black text-lg md:text-xl transition-all duration-300 transform hover:scale-105 active:scale-95 ${isDark ? 'bg-gradient-to-r from-orange-600 to-rose-600 hover:from-orange-500 hover:to-rose-500' : 'bg-gradient-to-r from-orange-500 to-rose-500 hover:from-orange-600 hover:to-rose-600'} text-white shadow-2xl flex items-center justify-center gap-3`}>
                     {t.cta}
-                    <ChevronRight size={28} className="group-hover:translate-x-2 transition-transform" />
+                    <ChevronRight size={24} className="md:hidden" />
+                    <ChevronRight size={28} className="hidden md:block group-hover:translate-x-2 transition-transform" />
                   </button>
                   <button onClick={() => setCurrentPage('contact')}
-                          className={`px-10 py-5 rounded-2xl font-black text-xl transition-all duration-300 hover:scale-110 flex items-center justify-center gap-3 glass ${isDark ? 'bg-gray-900/50 hover:bg-gray-800/50 backdrop-blur border-2 border-teal-500/50' : 'bg-white/50 hover:bg-gray-100/50 backdrop-blur border-2 border-teal-300'} shadow-2xl`}>
-                    <Zap size={24} />
+                          className={`px-8 md:px-10 py-4 md:py-5 rounded-2xl font-black text-lg md:text-xl transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-3 glass ${isDark ? 'bg-gray-900/50 hover:bg-gray-800/50 backdrop-blur border-2 border-teal-500/50' : 'bg-white/50 hover:bg-gray-100/50 backdrop-blur border-2 border-teal-300'} shadow-2xl`}>
+                    <Zap size={20} className="md:hidden" />
+                    <Zap size={24} className="hidden md:block" />
                     {t.ctaSecondary}
                   </button>
                 </div>
 
-                <div className="flex justify-center gap-6 pt-10">
+                <div className="flex justify-center gap-4 md:gap-6 pt-8 md:pt-10">
                   <a href="https://github.com/moounally" target="_blank" rel="noopener noreferrer"
                      title={t.hoverMessages.github}
-                     className={`p-5 rounded-2xl transition-all duration-300 hover:scale-125 hover:-rotate-6 ${isDark ? 'bg-gray-900/50 hover:bg-gray-800 border-2 border-gray-700' : 'bg-white hover:bg-gray-100 border-2 border-gray-300'} shadow-xl`}>
-                    <Github size={32} />
+                     className={`p-4 md:p-5 rounded-2xl transition-all duration-300 hover:scale-125 active:scale-110 hover:-rotate-6 ${isDark ? 'bg-gray-900/50 hover:bg-gray-800 border-2 border-gray-700' : 'bg-white hover:bg-gray-100 border-2 border-gray-300'} shadow-xl`}>
+                    <Github size={28} className="md:hidden" />
+                    <Github size={32} className="hidden md:block" />
                   </a>
                   <a href="https://linkedin.com/in/mohamed-dhia-ounally" target="_blank" rel="noopener noreferrer"
                      title={t.hoverMessages.linkedin}
-                     className={`p-5 rounded-2xl transition-all duration-300 hover:scale-125 hover:rotate-6 ${isDark ? 'bg-blue-950/50 hover:bg-blue-900 border-2 border-blue-700' : 'bg-blue-50 hover:bg-blue-100 border-2 border-blue-300'} shadow-xl`}>
-                    <Linkedin size={32} />
+                     className={`p-4 md:p-5 rounded-2xl transition-all duration-300 hover:scale-125 active:scale-110 hover:rotate-6 ${isDark ? 'bg-blue-950/50 hover:bg-blue-900 border-2 border-blue-700' : 'bg-blue-50 hover:bg-blue-100 border-2 border-blue-300'} shadow-xl`}>
+                    <Linkedin size={28} className="md:hidden" />
+                    <Linkedin size={32} className="hidden md:block" />
                   </a>
                   <a href="mailto:Mohamed_Dhia.OUNALLY@etu.uca.fr"
                      title={t.hoverMessages.email}
